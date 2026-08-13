@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import elementRepo.HomePage;
 import genericLab.BaseClass;
 
 public class Test2 extends BaseClass {
@@ -14,9 +15,8 @@ public class Test2 extends BaseClass {
 		Select s = new Select(we);
 		s.selectByValue("lohi");
 		System.out.println(driver.findElement(By.className("title")).getText());
-		System.out.println("Do the next step from here");
-		System.out.println("Will do it later");
-		System.out.println("this is in prioty");
-		
+		HomePage hp = new HomePage(driver);
+		hp.getMenuOpt().click();
+		hp.getlogoutLink().click();
 	}
 }

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-13T06:46:51 IST" name="Default suite" finished-at="2026-08-13T06:46:56 IST" duration-ms="4724">
+  <suite started-at="2026-08-14T00:14:06 IST" name="Default suite" finished-at="2026-08-14T00:14:09 IST" duration-ms="3649">
     <groups>
     </groups>
-    <test started-at="2026-08-13T06:46:51 IST" name="Default test" finished-at="2026-08-13T06:46:56 IST" duration-ms="4724">
-      <class name="testScripts.End2End">
-        <test-method is-config="true" signature="login()[pri:0, instance:testScripts.End2End@618b19ad]" started-at="2026-08-13T06:46:51 IST" name="login" finished-at="2026-08-13T06:46:54 IST" duration-ms="2457" status="PASS">
+    <test started-at="2026-08-14T00:14:06 IST" name="Default test" finished-at="2026-08-14T00:14:09 IST" duration-ms="3649">
+      <class name="testScripts.Test2">
+        <test-method is-config="true" signature="login()[pri:0, instance:testScripts.Test2@3a52dba3]" started-at="2026-08-14T00:14:06 IST" name="login" finished-at="2026-08-14T00:14:08 IST" duration-ms="2774" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="purchaseOrder()[pri:0, instance:testScripts.End2End@618b19ad]" started-at="2026-08-13T06:46:54 IST" name="purchaseOrder" finished-at="2026-08-13T06:46:56 IST" duration-ms="2023" status="PASS">
+        <test-method signature="Functional()[pri:0, instance:testScripts.Test2@3a52dba3]" started-at="2026-08-14T00:14:08 IST" name="Functional" finished-at="2026-08-14T00:14:09 IST" duration-ms="472" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- purchaseOrder -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:testScripts.End2End@618b19ad]" started-at="2026-08-13T06:46:56 IST" name="logout" finished-at="2026-08-13T06:46:56 IST" duration-ms="196" status="PASS">
+        </test-method> <!-- Functional -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:testScripts.Test2@3a52dba3]" started-at="2026-08-14T00:14:09 IST" name="logout" finished-at="2026-08-14T00:14:09 IST" duration-ms="365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-      </class> <!-- testScripts.End2End -->
+      </class> <!-- testScripts.Test2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
