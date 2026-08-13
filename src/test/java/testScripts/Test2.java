@@ -14,7 +14,6 @@ public class Test2 extends BaseClass {
 		Select s = new Select(we);
 		s.selectByValue("lohi");
 		System.out.println(driver.findElement(By.className("title")).getText());
-		// driver.close();
-
+		System.out.println("Do the next step from here");
 	}
 }
