@@ -15,5 +15,6 @@ public class Test2 extends BaseClass {
 		s.selectByValue("lohi");
 		System.out.println(driver.findElement(By.className("title")).getText());
 		System.out.println("Do the next step from here");
+		System.out.println("Will do it later");
 	}
 }
