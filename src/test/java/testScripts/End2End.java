@@ -20,11 +20,11 @@ import genericLab.DataUtility;
 import genericLab.Retry;
 @Listeners(genericLab.ListenerImplementation.class)
 public class End2End extends BaseClass {
+	String expectedLogo = "Swag Labs";
+	String productName = "Sauce Labs Bolt T-Shirt";
+	String expectedResult = "Thank you for your order!";
 	@Test(retryAnalyzer = Retry.class)
 	public void purchaseOrder() throws IOException, InterruptedException {
-		String expectedLogo = "Swag Labs";
-		String productName = "Sauce Labs Bolt T-Shirt";
-		String expectedResult = "Thank you for your order!";
 		SoftAssert sa = new SoftAssert();
 		// Home Page
 		HomePage hp = new HomePage(driver);
