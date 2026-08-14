@@ -18,13 +18,15 @@ import genericLab.BaseClass;
 import genericLab.CommonUtility;
 import genericLab.DataUtility;
 import genericLab.Retry;
+
 @Listeners(genericLab.ListenerImplementation.class)
 public class End2End extends BaseClass {
 	String expectedLogo = "Swag Labs";
 	String productName = "Sauce Labs Bolt T-Shirt";
 	String expectedResult = "Thank you for your order!";
-	@Test(retryAnalyzer = Retry.class)
-	public void purchaseOrder() throws IOException, InterruptedException {
+
+	@Test(retryAnalyzer = Retry.class, dataProvider = "testData", dataProviderClass = DataUtility.class)
+	public void purchaseOrder(String firstName, String lastName, String pin) throws IOException, InterruptedException {
 		SoftAssert sa = new SoftAssert();
 		// Home Page
 		HomePage hp = new HomePage(driver);
@@ -51,10 +53,16 @@ public class End2End extends BaseClass {
 		cp.getcheckout().click();
 		// User Details page
 		UserDetailsPage udp = new UserDetailsPage(driver);
-		DataUtility dl = new DataUtility();
-		udp.getFirstName().sendKeys(dl.getTestData()[0]);
-		udp.getLastName().sendKeys(dl.getTestData()[1]);
-		udp.getPin().sendKeys(dl.getTestData()[2]);
+		//Single time if we need to execute
+//		DataUtility dl = new DataUtility();
+//		udp.getFirstName().sendKeys(dl.getTestData()[0]);
+//		udp.getLastName().sendKeys(dl.getTestData()[1]);
+//		udp.getPin().sendKeys(dl.getTestData()[2]);
+		
+		//Multiple time execution
+		udp.getFirstName().sendKeys(firstName);
+		udp.getLastName().sendKeys(lastName);
+		udp.getPin().sendKeys(pin);
 		udp.getcontinueButton().click();
 		// Checkout Page
 		CommonUtility cu = new CommonUtility();
